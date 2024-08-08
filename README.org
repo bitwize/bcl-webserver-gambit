@@ -1,5 +1,5 @@
 #+TITLE: Below C Level Webserver (Gambit version)
-#:AUTHOR: Jeff Read <bitwize@gmail.com>
+#+AUTHOR: Jeff Read <bitwize@gmail.com>
 
 * Rationale
 
