@@ -1,0 +1,33 @@
+#+TITLE: Below C Level Webserver (Gambit version)
+#:AUTHOR: Jeff Read <bitwize@gmail.com>
+
+* Rationale
+
+Because I didn't get to write my Lisp web server at the meeting on
+August 6, 2024, I decided to speedrun writing one at home. It took me
+approximately 1 hour and 51 minutes to produce this implementation.
+
+* How to Run
+
+  + Get Gambit from https://gambitscheme.org. Compile and install (or
+    download it through your OS package manager).
+  + Make a directory called ~/tmp/webserver~. Put a file or two in it.
+  + Assuming your Gambit interpreter is called ~gsi~ and is in your
+    ~$PATH~, say:
+    : gsi webserver.scm
+  + Now when you connect to the webserver with a browser or curl,
+    accessing the URL
+
+    : http://localhost:8080/file.txt
+
+    will fetch the file
+
+    : /tmp/webserver/file.txt
+  + Only text/plain is supported. Rudimentary error support (403
+    Forbidden and 404 Not Found) is provided. If anything else goes
+    catty-wumpus in the server, it should throw a 500 and log the
+    problem to stderr.
+
+* And most importantly...
+
+Have fun!
